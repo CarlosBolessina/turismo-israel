@@ -1,0 +1,558 @@
+
+/* ==========================================================================
+   1. FUENTES Y VARIABLES GLOBALES
+   ========================================================================== */
+
+@font-face {
+    font-family: 'letras_arabes';
+    src: url("hidayatullah DEMO.ttf"); /* Ruta corregida con barra estándar */
+}
+
+:root {
+    --celeste: rgb(48, 197, 235);
+    --azul: rgb(32, 63, 240);
+    --blanco: rgb(245, 245, 245);
+    --negro: black;
+    --colorNav: rgb(231, 65, 65);
+    --azul404: rgba(4, 93, 172, 0.87);
+    
+    --tamaño_titulo: 50px;
+    --tamaño_titulo_resp: 30px;
+    --subTitulos: 30px;
+    --subtitulo_recorrido: 20px;
+    --subtitulos_caja: 25px;
+    --subtitulosMe1200: 23px;
+    --subtitulosME900: 19px;
+    --parrafos: 20px;
+    --parrofosMe1200: 18px;
+    --parrafosMe900: 16px;
+    --navegacion: 20px;
+}
+
+/* ==========================================================================
+   2. REGLAS GENERALES Y RESET
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'letras_arabes', sans-serif;
+    overflow-x: hidden;
+}
+
+body, 
+.contenedor,
+.contenedor2 {
+    background-color: var(--azul);
+}
+
+a {
+    font-size: var(--navegacion);
+    color: var(--celeste);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--colorNav);
+}
+
+p {
+    font-size: var(--parrafos);
+    color: var(--celeste);
+    padding: 20px;
+}
+
+h1 {
+    color: var(--celeste);
+    font-size: var(--tamaño_titulo);
+    text-align: center;
+    margin: 40px 0 10px 0;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: var(--subTitulos);
+    color: var(--celeste);
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: var(--subtitulos_caja);
+    text-align: center;
+    margin-top: 10px;
+    color: var(--azul);
+}
+
+h4 {
+    color: var(--celeste);
+    text-align: center;
+}
+
+/* ==========================================================================
+   3. ENCABEZADO Y ARTÍCULO PRINCIPAL
+   ========================================================================== */
+
+.imagenPrincipal {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+audio {
+    height: 30px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.article {
+    padding: 20px;
+}
+
+.subt {
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+
+.jesus {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+/* ==========================================================================
+   4. GRILLA DE TARJETAS (TARJETAS 1 A 30)
+   ========================================================================== */
+
+.contenedor, .contenedor2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+
+.uno, .dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho, .nueve, .diez,
+.once, .doce, .trece, .catorce, .quince, .dieciseis, .diecisiete, .dieciocho,
+.diecinueve, .veinte, .veintiuno, .veintidos, .veintitres, .veinticuatro,
+.veinticinco, .veintiseis, .veintisiete, .veintiocho, .veintinueve, .treinta {
+    width: 31%;
+    min-height: 640px;
+    border: 2px solid var(--negro);
+    border-radius: 10px;
+    background-color: var(--celeste);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.i1, .i2, .i3, .i4, .i5, .i6, .i7, .i8, .i9, .i10,
+.i11, .i12, .i13, .i14, .i15, .i16, .i17, .i18, .i19, .i20,
+.i21, .i22, .i23, .i24, .i25, .i26, .i27, .i28, .i29, .i30 {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 95%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.i19, .i25, .i27, .i28, .i29 {
+    height: 47%;
+    width: 95%;
+}
+
+
+.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+.p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18, .p19, .p20,
+.p21, .p22, .p23, .p24, .p25, .p26, .p27, .p28, .p29, .p30 {
+    color: var(--azul);
+}
+
+
+.navb {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.masAtracciones, .irPP {
+    color: var(--celeste);
+    display: inline-block;
+    text-align: center;
+}
+
+/* ==========================================================================
+   5. SECCIÓN MULTIMEDIA (VIDEO Y MAPA)
+   ========================================================================== */
+
+.seccion-multimedia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.subt2 {
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+iframe {
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+}
+
+.mapa {
+    width: 90%;
+    max-width: 600px;
+    height: 450px;
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA (FOOTER) Y FORMULARIO
+   ========================================================================== */
+
+
+footer.pie_pagina {
+    width: 100%;
+    background-color: var(--negro);
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    position: relative;
+    top: 0; 
+}
+
+.col_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.col_nav h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.lista_footer {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 0;
+}
+
+.lista_footer a {
+    color: var(--celeste);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.lista_footer a:hover {
+    color: var(--colorNav);
+}
+
+
+.formulario {
+    width: 320px;
+    background-color: var(--celeste);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    position: static; 
+}
+
+.t_formulario {
+    color: var(--blanco);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.t1, .t2, .t3, .t4, .t5, .t6 {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    position: static;
+    left: 0;
+}
+
+.t6 {
+    height: 90px;
+    resize: none;
+}
+
+.botones_form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.be, .bb {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blanco);
+    color: var(--azul);
+    font-weight: bold;
+    cursor: pointer;
+    position: static;
+    width: auto;
+}
+
+.be:hover, .bb:hover {
+    background-color: var(--colorNav);
+    color: var(--blanco);
+}
+
+
+.col_social h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.redes_iconos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.what, .inst, .faceb, .mail {
+    position: static; 
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+.mail {
+    width: 40px;
+    height: 40px;
+}
+
+.what:hover, .inst:hover, .faceb:hover, .mail:hover {
+    transform: scale(1.15);
+}
+
+.donacion_box {
+    display: flex;
+    justify-content: center;
+}
+
+.donacion {
+    position: static; 
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 850px) {
+    footer.pie_pagina {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ==========================================================================
+   7. PÁGINAS ESPECIALES (ERROR 404 Y CONFIRMACIÓN)
+   ========================================================================== */
+
+/* --- Estilos para P_Error.html --- */
+.body_error {
+    background-color: var(--negro);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor_error {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--celeste);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.codigo_error {
+    font-size: 100px;
+    font-weight: 900;
+    color: var(--celeste);
+    margin: 0;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.titulo_error {
+    color: var(--blanco);
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+}
+
+.descripcion_error {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.acciones_error {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn_error_inicio, .btn_error_secundario {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn_error_inicio {
+    background-color: var(--celeste);
+    color: var(--negro);
+}
+
+.btn_error_inicio:hover {
+    background-color: var(--colorNav);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.btn_error_secundario {
+    border: 2px solid var(--celeste);
+    color: var(--celeste);
+}
+
+.btn_error_secundario:hover {
+    background-color: var(--celeste);
+    color: var(--negro);
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================================================
+   8. MEDIA QUERIES (RESPONSIVE DESIGN UNIFICADO)
+   ========================================================================== */
+
+@media screen and (max-width: 1331px) {
+    .i19, .i25, .i27, .i28, .i29 {
+        height: 40%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .conf_p {
+        font-size: 18px;
+        padding: 18px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    p {
+        font-size: var(--parrofosMe1200);
+    }
+    h3 {
+        font-size: var(--subtitulosMe1200);
+    }
+}
+
+@media screen and (max-width: 1058px) {
+    .conf_p {
+        font-size: 15px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    p {
+        font-size: var(--parrafosMe900);
+    }
+    h3 {
+        font-size: var(--subtitulosME900);
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .uno, .dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho, .nueve, .diez,
+    .once, .doce, .trece, .catorce, .quince, .dieciseis, .diecisiete, .dieciocho,
+    .diecinueve, .veinte, .veintiuno, .veintidos, .veintitres, .veinticuatro,
+    .veinticinco, .veintiseis, .veintisiete, .veintiocho, .veintinueve, .treinta {
+        width: 48%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    h1 {
+        font-size: var(--tamaño_titulo_resp);
+    }
+    h2 {
+        font-size: var(--subtitulo_recorrido);
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .uno, .dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho, .nueve, .diez,
+    .once, .doce, .trece, .catorce, .quince, .dieciseis, .diecisiete, .dieciocho,
+    .diecinueve, .veinte, .veintiuno, .veintidos, .veintitres, .veinticuatro,
+    .veinticinco, .veintiseis, .veintisiete, .veintiocho, .veintinueve, .treinta {
+        width: 100%;
+    }
+
+    .confirmacion {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+}
