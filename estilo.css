@@ -556,69 +556,77 @@ footer.pie_pagina {
         grid-template-rows: auto auto;
     }
 
-    /* ==========================================================================
-   PÁGINA DE CONFIRMACIÓN (P_Confirmacion.html)
+/* ==========================================================================
+   PÁGINA DE CONFIRMACIÓN (ESTILOS DEFINITIVOS)
    ========================================================================== */
 
-.body_confirmacion {
-    background-color: var(--negro);
+body.body_confirmacion {
+    background-color: var(--negro, #121212) !important;
+    background-image: none !important;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 20px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box;
 }
 
 .contenedor_confirmacion {
     text-align: center;
     max-width: 500px;
     width: 100%;
-    padding: 30px 20px;
+    padding: 35px 25px;
     background: rgba(255, 255, 255, 0.05);
-    border: 2px solid var(--celeste);
+    border: 2px solid var(--celeste, #00d4ff);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     box-sizing: border-box;
+    margin: auto;
 }
 
-/* Controlar tamaño de la imagen */
-.img_confirmacion {
-    max-width: 150px; /* Evita que la imagen sea gigante */
-    width: 100%;
-    height: auto;
-    margin: 20px auto;
-    display: block;
-}
-
-/* Visibilidad de los textos */
 .titulo_confirmacion {
-    color: var(--celeste);
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 26px !important;
+    font-weight: 800;
+    color: var(--celeste, #00d4ff) !important;
+    margin: 0 0 15px 0 !important;
 }
 
 .texto_confirmacion {
-    color: var(--blanco); /* Garantiza la lectura de las letras */
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 25px;
+    color: var(--blanco, #ffffff) !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
 }
 
-/* Botón de regreso */
+.despedida_confirmacion {
+    color: var(--celeste, #00d4ff) !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    margin-bottom: 25px !important;
+}
+
+.acciones_confirmacion {
+    display: flex;
+    justify-content: center;
+}
+
 .btn_confirmacion {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--celeste);
-    color: var(--negro);
+    padding: 12px 28px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    background-color: var(--celeste, #00d4ff) !important;
+    color: var(--negro, #000000) !important;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn_confirmacion:hover {
-    background-color: var(--colorNav);
-    color: var(--blanco);
+    background-color: var(--colorNav, #0077b6) !important;
+    color: var(--blanco, #ffffff) !important;
+    transform: translateY(-2px);
 }
 }
