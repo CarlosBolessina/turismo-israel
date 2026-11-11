@@ -555,4 +555,70 @@ footer.pie_pagina {
         grid-template-columns: 100%;
         grid-template-rows: auto auto;
     }
+
+    /* ==========================================================================
+   PÁGINA DE CONFIRMACIÓN (P_Confirmacion.html)
+   ========================================================================== */
+
+.body_confirmacion {
+    background-color: var(--negro);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor_confirmacion {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--celeste);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+/* Controlar tamaño de la imagen */
+.img_confirmacion {
+    max-width: 150px; /* Evita que la imagen sea gigante */
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Visibilidad de los textos */
+.titulo_confirmacion {
+    color: var(--celeste);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.texto_confirmacion {
+    color: var(--blanco); /* Garantiza la lectura de las letras */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Botón de regreso */
+.btn_confirmacion {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--celeste);
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn_confirmacion:hover {
+    background-color: var(--colorNav);
+    color: var(--blanco);
+}
 }
